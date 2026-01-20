@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphic Design | WildCraft Studio</title>
+
+  <meta name="description" content="Professional graphic design services by WildCraft Studio — logo design, branding, social media visuals, and more.">
+  <meta property="og:title" content="Graphic Design | WildCraft Studio">
+  <meta property="og:image" content="/gp4.avif">
+  <meta property="og:description" content="Transform your brand with WildCraft Studio’s creative graphic design expertise.">
+
+  <style>
+/* === WildCraft Studio Tron-Style Dark Theme === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0f14;
+  color: #dce1e7;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: rgba(20, 25, 32, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 1px solid #1f2933;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #00e6b8;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+nav a {
+  color: #cfd3d7;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00e6b8;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00e6b8;
+  transition: width 0.3s ease;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(to bottom right, rgba(0, 230, 184, 0.1), rgba(0, 0, 0, 0.9)),
+              url('/hiromain/still-life-graphic-design-studio.jpg') center/cover no-repeat;
+  text-align: center;
+  color: #ffffff;
+  padding: 120px 20px;
+  box-shadow: inset 0 0 80px rgba(0, 230, 184, 0.2);
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  color: #00e6b8;
+  text-shadow: 0 0 20px rgba(0, 230, 184, 0.6);
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 15px auto 0;
+  color: #cfd3d7;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.95rem;
+}
+.breadcrumb a {
+  color: #00e6b8;
+  text-decoration: none;
+}
+.breadcrumb span {
+  color: #aab4bf;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  padding: 80px 10%;
+  text-align: center;
+}
+.content h3 {
+  color: #00e6b8;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.content p {
+  max-width: 800px;
+  margin: 15px auto;
+  color: #dce1e7;
+  font-size: 1.05rem;
+}
+
+/* ===== HIGHLIGHTS ===== */
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+.highlights .stat {
+  text-align: center;
+}
+.highlights h4 {
+  color: #00e6b8;
+  font-size: 2rem;
+  margin: 0;
+}
+.highlights p {
+  color: #cfd3d7;
+  font-size: 1rem;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 230, 184, 0.2);
+  box-shadow: 0 0 20px rgba(0, 230, 184, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+  border-color: #00e6b8;
+  box-shadow: 0 0 25px rgba(0, 230, 184, 0.4);
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+  margin-top: 80px;
+  text-align: center;
+}
+.testimonials h3 {
+  color: #00e6b8;
+  margin-bottom: 30px;
+}
+.testimonials p {
+  max-width: 600px;
+  margin: 15px auto;
+  font-style: italic;
+  color: #aab4bf;
+}
+
+/* ===== CTA ===== */
+.cta {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(0,230,184,0.05), rgba(0,230,184,0.1));
+  padding: 80px 20px;
+  border-radius: 10px;
+  margin: 80px 10%;
+}
+.cta h3 {
+  color: #00e6b8;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+.cta-btn {
+  background: #00e6b8;
+  color: #0b0f14;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.cta-btn:hover {
+  background: transparent;
+  color: #00e6b8;
+  border: 2px solid #00e6b8;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: rgba(20, 25, 32, 0.95);
+  color: #aab4bf;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid #1f2933;
+  margin-top: 60px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  nav a {
+    margin: 8px;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .content {
+    padding: 50px 6%;
+  }
+  .highlights {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>WildCraft Studio</h1>
+        <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Graphic Design</h2>
+    <p>Turning ideas into visual masterpieces that speak louder than words.</p>
+  </section>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> › 
+    <a href="services.html">Services</a> › 
+    <span>Graphic Design</span>
+  </div>
+
+  <section class="content">
+    <h3>Our Creative Design Approach</h3>
+    <p>
+      At <b>WildCraft Studio</b>, creativity flows like a wild river.
+      We design stunning visuals that align with your brand and connect emotionally with your audience.
+      Whether it's a logo, poster, social media post, or complete branding — we bring your vision to life.
+    </p>
+
+    <section class="highlights">
+      <div class="stat">
+        <h4>150+</h4>
+        <p>Design Projects</p>
+      </div>
+      <div class="stat">
+        <h4>95%</h4>
+        <p>Client Satisfaction</p>
+      </div>
+      <div class="stat">
+        <h4>10+</h4>
+        <p>Brands Scaled</p>
+      </div>
+    </section>
+
+    <h3>What We Offer</h3>
+    <p>🎨 Logo Design<br>
+       🖼️ Brand Identity<br>
+       📱 Social Media Graphics<br>
+       📦 Packaging Design<br>
+       🧾 Print & Digital Media</p>
+
+    <div class="gallery">
+      <img src="/graphic design/gp 1.jpg" alt="Graphic Work 1">
+      <img src="/graphic design/gp4.avif" alt="Graphic Work 2">
+      <img src="/graphic design/gp3.webp" alt="Graphic Work 3">
+    </div>
+
+    <section class="testimonials">
+      <h3>What Our Clients Say</h3>
+      <p>"WildCraft transformed our brand’s look — truly creative minds!"<br>– Sarah, Brand Manager</p>
+      <p>"Their designs helped our social presence explode."<br>– Ali, Startup Founder</p>
+    </section>
+
+    <section class="cta">
+      <h3>Ready to Craft Your Visual Story?</h3>
+      <a href="contact.html" class="cta-btn">Get a Free Design Consultation</a>
+    </section>
+  </section>
+
+  <footer>
+    © 2025 WildCraft Studio | Graphic Design Services
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WildCraft Studio - Our Services</title>
+  <meta name="description" content="WildCraft Studio offers creative services in branding, design, marketing, video editing, and Shopify development.">
+  <link rel="icon" href="/favicon.png">
+  <style>
+/* === WildCraft Studio Tron-Style Dark Theme (Enhanced Services Page) === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0f14;
+  color: #dce1e7;
+}
+
+/* Header / Navbar */
+header {
+  background: rgba(20, 25, 32, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 1px solid #1f2933;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #00e6b8;
+  margin: 0;
+}
+
+nav a {
+  color: #cfd3d7;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover { color: #00e6b8; }
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00e6b8;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after { width: 100%; }
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom, rgba(0, 230, 184, 0.1), rgba(0, 0, 0, 0.9)),
+              url('/hiromain/fantasy-dj-illustration.jpg') center/cover no-repeat;
+  text-align: center;
+  color: #ffffff;
+  padding: 130px 20px;
+  box-shadow: inset 0 0 80px rgba(0, 230, 184, 0.25);
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  color: #00e6b8;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #cfd3d7;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Services Section */
+.services-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.services-section h2 {
+  color: #00e6b8;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.services-section p {
+  color: #cfd3d7;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 10%;
+}
+
+.service-box {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0,230,184,0.4);
+}
+
+.service-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-box h3 {
+  color: #00e6b8;
+  margin: 20px 0 10px;
+  font-size: 1.4rem;
+}
+
+.service-box p {
+  color: #cfd3d7;
+  font-size: 0.95rem;
+  padding: 0 20px 25px;
+  line-height: 1.5;
+}
+
+/* Process Section */
+.process {
+  text-align: center;
+  padding: 80px 10%;
+  background: rgba(255,255,255,0.02);
+  border-top: 1px solid #1f2933;
+  border-bottom: 1px solid #1f2933;
+}
+
+.process h2 {
+  color: #00e6b8;
+  margin-bottom: 40px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.step {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,230,184,0.3);
+}
+
+.step h4 {
+  color: #00e6b8;
+  margin-bottom: 10px;
+}
+
+/* Testimonials */
+.testimonials {
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.testimonials h2 {
+  color: #00e6b8;
+  margin-bottom: 40px;
+}
+
+.quote {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 25px;
+  font-style: italic;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.quote span {
+  display: block;
+  color: #00e6b8;
+  margin-top: 10px;
+  font-style: normal;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #00e6b8, #03ffc3);
+  color: #0b0f14;
+}
+
+.cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.cta a {
+  background: #0b0f14;
+  color: #00e6b8;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cta a:hover {
+  background: #1a1f25;
+  color: #03ffc3;
+}
+
+/* Footer */
+footer {
+  background: rgba(20,25,32,0.95);
+  color: #aab4bf;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid #1f2933;
+}
+
+a {text-decoration: none;}
+
+/* Responsive */
+/* === iPhone 11 / Mobile Responsive Fix for Services Page === */
+@media (max-width: 480px) {
+
+  /* Header adjustments */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  /* Hero section */
+  .hero {
+    padding: 90px 20px;
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  /* Services grid – 2 columns on mobile */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 5%;
+  }
+
+  .service-box h3 {
+    font-size: 1rem;
+  }
+
+  .service-box p {
+    font-size: 0.9rem;
+    padding: 0 10px 20px;
+  }
+
+  /* Process steps – stack in 1 column for readability */
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .step {
+    padding: 25px;
+  }
+
+  /* Testimonials */
+  .quote {
+    font-size: 0.95rem;
+    padding: 25px 20px;
+  }
+
+  /* CTA */
+  .cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta a {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.85rem;
+    padding: 20px 10px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>WildCraft Studio</h1>
+        <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Our Creative Services</h2>
+    <p>We help brands grow with bold ideas, powerful visuals, and strategy-driven design.</p>
+  </section>
+
+  <section class="services-section">
+    <h2>What We Offer</h2>
+    <p>Explore our specialized services designed to elevate your brand and make it unforgettable.</p>
+
+    <div class="services-grid">
+      <div class="service-box">
+        <a href="graphic-design.html">
+        <img src="/graphic design/still-life-graphic-design-studio.jpg" alt="Graphic Design">
+        <h3>Graphic Design</h3>
+        </a>
+        <p>From logos to brand systems — we create visuals that define your identity.</p>
+      </div>
+
+      <div class="service-box">
+        <a href="social-media.html">
+        <img src="/social media/social-media-graphic.jpg" alt="Social Media Marketing">
+        <h3>Social Media Marketing</h3>
+        </a>
+        <p>Amplify your reach and engagement through smart digital campaigns.</p>
+      </div>
+
+      <div class="service-box">
+        <a href="shopify.html">
+        <img src="/shopify store/5464026.jpg" alt="Shopify Stores">
+        <h3>Shopify Store Development</h3>
+        </a>
+        <p>High-converting, beautifully designed online stores that perform flawlessly.</p>
+      </div>
+
+      <div class="service-box">
+        <a href="video-editing.html">
+        <img src="/video editing/professional-agency-setup-cinematic-footage-creation-video-editing.jpg" alt="Video Editing">
+        <h3>Video Editing</h3>
+        </a>
+        <p>Transform footage into cinematic stories that captivate and convert.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <h2>Our Creative Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <h4>1. Discover</h4>
+        <p>We learn about your brand, goals, and target audience.</p>
+      </div>
+      <div class="step">
+        <h4>2. Design</h4>
+        <p>Our team creates bold, strategy-backed visuals that align with your story.</p>
+      </div>
+      <div class="step">
+        <h4>3. Develop</h4>
+        <p>We bring the design to life through smooth execution and pixel perfection.</p>
+      </div>
+      <div class="step">
+        <h4>4. Deliver</h4>
+        <p>Final delivery with support, optimization, and continuous collaboration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="quote">“WildCraft completely redefined our brand identity. The attention to detail is unreal!” <span>— Nova Brands</span></div>
+    <div class="quote">“Their Shopify expertise helped us double our sales in two months.” <span>— OceanWear Co.</span></div>
+    <div class="quote">“Amazing video editing and design. They make creativity feel effortless.” <span>— VisionEdge Media</span></div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Build Something Wild?</h2>
+    <a href="contact.html">Get in Touch</a>
+  </section>
+
+  <footer>
+    &copy; 2025 WildCraft Studio. All rights reserved.
+  </footer>
+
+</body>
+</html>
