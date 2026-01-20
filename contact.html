@@ -236,6 +236,122 @@ footer {
   margin-top: 60px;
 }
 
+/* ===== EXTRA SMALL MOBILE (0px - 300px) ===== */
+@media (max-width: 300px) {
+  /* Header vertical & center */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    margin: 2px 0;
+  }
+
+  /* HERO section centered */
+  .contact-hero {
+    padding: 50px 10px 30px;
+    text-align: center;
+  }
+
+  .contact-hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-hero p {
+    font-size: 0.9rem;
+  }
+
+  /* CONTACT SECTION */
+  .contact-section h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .contact-section p {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 8px;
+  }
+
+  /* CONTACT CONTAINER stacked & centered */
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 5%;
+  }
+
+  .contact-info, .contact-form {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .contact-info h4, .contact-form h4 {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  label {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  input, textarea, button {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  textarea {
+    min-height: 90px;
+  }
+
+  button {
+    padding: 10px;
+  }
+
+  /* SOCIAL LINKS centered */
+  .social-links {
+    text-align: center;
+  }
+  .social-links a img {
+    width: 22px;
+    margin: 0 6px;
+  }
+
+  /* MAP adjustments */
+  .map-container {
+    width: 95%;
+    height: 200px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 18px 10px;
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   header {
@@ -303,9 +419,9 @@ footer {
     </div>
 
     <div class="social-links">
-      <a href="#"><img src="/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="/linkedin.svg" alt="LinkedIn"></a>
-      <a href="#"><img src="/twitter-alt.svg" alt="Twitter"></a>
+      <a href="#"><img src="instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="linkedin.svg" alt="LinkedIn"></a>
+      <a href="#"><img src="twitter-alt.svg" alt="Twitter"></a>
     </div>
   </section>
 
